@@ -1,0 +1,67 @@
+<%@page pageEncoding="utf-8"  %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <base href="<%=request.getContextPath()%>/">
+    <title>深基坑实时监测</title>
+</head>
+<body>
+
+<header>
+    <strong>${message}</strong>
+    <form action="pit/current.do" method="post">
+        <p>
+            <label>
+                通道:
+                <input name="num"  autofocus>
+            </label>
+            <button type="submit">Go</button>
+        </p>
+    </form>
+</header>
+<main>
+    <c:if test="${p!=null}">
+        <article>
+            <p>
+                <span>
+					通道:
+					<b>${p.num}</b>
+				</span>
+				<span>
+					水平位移:
+					<b>${p.lateral}</b>
+				</span>
+                <span>
+					竖直位移:
+					<b>${p.vertical}</b>
+				</span>
+                <span>
+					倾斜角:
+					<b>${p.slant}</b>
+				</span>
+            </p>
+            <p>
+				<span>
+					水位:
+					<b>${p.waterlevel}</b>
+				</span>
+                <span>
+					应力:
+					<b>${p.stress}</b>
+				</span>
+                <span>
+					缝隙:
+					<b>${p.gap}</b>
+				</span>
+            </p>
+
+        </article>
+    </c:if>
+
+</main>
+
+</body>
+</html>

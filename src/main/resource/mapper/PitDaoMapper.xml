@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wx.pit.dao.PitDao">
+<insert id="insert">
+    insert into pit_detail(id,num,toplateral,topvertical,slant,deeplateral,columnvertical,waterlevel,supportforce,boltstress,gap)
+    values (#{id},#{num},#{toplateral},#{topvertical},#{slant},#{deeplateral},#{columnvertical},#{waterlevel},#{supportforce},#{boltstress},#{gap})
+</insert>
+
+    <update id="update">
+        update pit_detail set
+        num=#{num},
+        toplateral=#{toplateral},
+        topvertical=#{topvertical},
+        slant=#{slant},
+        deeplateral=#{deeplateral},
+        columnvertical=#{columnvertical}.
+        waterlevel=#{waterlevel},
+        supportforce=#{supportforce},
+        boltstress=#{boltstress},
+        gap=#{gap}
+        where id=#{id}
+    </update>
+
+    <select id="exsits" resultType="java.lang.Boolean">
+		select count(1)>0 from pit_detail where ${key}=#{value}
+	</select>
+    <select id="select" resultMap="PitMap">
+        select * from pit_detail where ${key}=#{value}
+    </select>
+
+    <select id="selectLike" resultMap="PitMap">
+        select * from pit_detail
+        <if test="key!=null">
+            where num like #{key}
+            or toplateral like #{key}
+            or topvertical like #{key}
+            or slant like #{key}
+            or deeplateral like #{key}
+            or columnvertical like #{key}
+            or waterlevel like #{key}
+            or supportforce like #{key}
+            or boltstress like #{key}
+            or gap like #{key}
+        </if>
+        order by num
+    </select>
+
+    <resultMap type="com.wx.pit.entity.PitEntity" id="PitMap" >
+        <id property="id" column="id"/>
+    </resultMap>
+</mapper>

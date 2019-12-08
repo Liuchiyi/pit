@@ -1,0 +1,77 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"%>
+
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>深基坑监测系统</title>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/style.css">
+
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/vector.js"></script>
+
+</head>
+<body>
+
+
+<div id="container">
+    <div id="output">
+        <div class="containerT">
+
+            <h4>用户登录</h4>
+            <form action="login.do" method="post" class="form" id="entry_form">
+                <div class="form-group">
+                    <label >账号</label>
+
+                    <input id="account"  class="form-control" name="account" value="0001" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码
+                        <a class="float-right">
+                            忘记密码?
+                        </a>
+                    </label>
+                    <input id="password" type="password" class="form-control" name="password" required data-eye>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="remember"> 记住我
+                    </label>
+                </div>
+
+                <div class="form-group no-margin">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        登陆
+                    </button>
+                </div>
+                <div class="margin-top20 text-center">
+                    没有账号？ <a href="registerpage.do">创建账号</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        Victor("container", "output");   //登录背景函数
+        $("#entry_name").focus();
+        $(document).keydown(function(event){
+            if(event.keyCode==13){
+                $("#entry_btn").click();
+            }
+        });
+    });
+</script>
+<div style="text-align:center;">
+</div>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+<script src="static/js/my-login.js"></script>
+</body>
+</html>
