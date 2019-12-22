@@ -98,7 +98,18 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">HEADER</li>
                 <!-- Optionally, you can add icons to the links -->
-
+                <li class="treeview">
+                    <a ><i class="fa fa-link"></i> <span>工程信息</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li ><a href="tunnel1.do">工程信息录入</a></li>
+                        <li><a href="tunnel2.do">工程信息修改</a></li>
+                        <li><a href="tunnel2.do">工程信息查询</a></li>
+                    </ul>
+                </li>
                 <li><a href="query.do" target=""><i class="fa fa-link"></i> <span>信息查询</span></a></li>
                 <li class="treeview">
                     <a ><i class="fa fa-link"></i> <span>实时监控</span>
@@ -107,42 +118,74 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="tunnel1.do">通道1</a></li>
+                        <li ><a href="tunnel1.do">通道1</a></li>
                         <li><a href="tunnel2.do">通道2</a></li>
                         <li><a href="tunnel3.do">通道3</a></li>
                     </ul>
                 </li>
-                <li  class="active"><a href="locate.do"><i class="fa fa-link"></i> <span>数据上传</span></a></li>
+                <li class="treeview">
+                    <a ><i class="fa fa-link"></i> <span>数据上传</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="tunnel1.do">文件上传</a></li>
+                        <li><a href="tunnel2.do">页面输入</a></li>
+
+                    </ul>
+                </li>
             </ul>
             <!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->
     </aside>
 
-    <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div >
+        <section class="content-header">
             <h1>
-                现场监测数据
+                数据文件上传
             </h1>
-            <form>
-                <div class="form-group">
-                    标段：
-                    <input id="account"   name="account" size="5" required autofocus >
-                </div>
-                <div class="form-group">
-                    <button type="submit" size="7">上传文件</button>
-                </div>
-                <div class="form-group">
-                    <button type="submit" size="7">提交</button>
-                </div>
-            </form>
-        </div>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+                <li><a href="#">数据上传</a></li>
+                <li><a href="#">文件上传</a></li>
+            </ol>
+        </section>
+        <section class="content">
+            <div class="box box-primary">
+            <!-- /.box-header -->
+            <!-- form start -->
+                <form role="form">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">File input</label>
+                            <input type="file" id="exampleInputFile">
 
-<div>
+                            <p class="help-block">Example block-level help text here.</p>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Check me out
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
 
-</div>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                </form>
+            </div>
+
         </section>
 
         <!-- Main content -->
@@ -157,7 +200,13 @@
     </div>
     <!-- /.content-wrapper -->
 
-    <!-- Control Sidebar -->
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.4.0
+        </div>
+        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+        reserved.
+    </footer>
 
 </div>
 <!-- ./wrapper -->

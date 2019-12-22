@@ -99,7 +99,18 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">HEADER</li>
                 <!-- Optionally, you can add icons to the links -->
-
+                <li class="treeview">
+                    <a ><i class="fa fa-link"></i> <span>工程信息</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li ><a href="tunnel1.do">工程信息录入</a></li>
+                        <li><a href="tunnel2.do">工程信息修改</a></li>
+                        <li><a href="tunnel2.do">工程信息查询</a></li>
+                    </ul>
+                </li>
                 <li><a href="query.do" target=""><i class="fa fa-link"></i> <span>信息查询</span></a></li>
                 <li class="treeview">
                     <a ><i class="fa fa-link"></i> <span>实时监控</span>
@@ -108,7 +119,7 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="tunnel1.do">通道1</a></li>
+                        <li ><a href="tunnel1.do">通道1</a></li>
                         <li><a href="tunnel2.do">通道2</a></li>
                         <li><a href="tunnel3.do">通道3</a></li>
                     </ul>
@@ -354,6 +365,56 @@
                 <!-- /.col (RIGHT) -->
             </div>
             <!-- /.row -->
+
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger">
+                Launch Danger Modal
+            </button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-warning">
+                Launch Warning Modal
+            </button>
+
+            <div class="modal modal-warning fade" id="modal-warning">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">紧急临界情况</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>预计有监测项即将超出预警值</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-outline">查看</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+            <div class="modal modal-danger fade" id="modal-danger">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">危险情况</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>出现当前监测值超出报警值</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-outline">查看</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
 
         </section>
         <!-- /.content -->
