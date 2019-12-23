@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>信息查询</title>
+    <title>报警信息查询</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -134,12 +134,12 @@
     <div class="content-wrapper">
         <section class="content-header">
             <h1>
-                监测数据查询
+                报警信息查询
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
                 <li><a href="#">监测信息</a></li>
-                <li><a href="#">监测数据查询</a></li>
+                <li><a href="#">报警信息查询</a></li>
             </ol>
         </section>
 
@@ -148,12 +148,36 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="box">
-                        <!--<div class="box-header">-->
-                            <!--<h3 class="box-title"></h3>-->
-                        <!--</div>-->
-                        <!-- /.box-header -->
                         <div class="box-body">
                             <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label >处理状态:</label>
+                                            <!--<div class="col-sm-10">-->
+                                            <select class="form-control select2" style="width: 100%;">
+                                                <option selected="selected">未处理</option>
+                                                <option>已处理</option>
+                                            </select>
+                                            <!--</div>-->
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- /.form-group -->
+                                        <div class="form-group">
+                                            <label >报警级别:</label>
+                                            <!--<div class="col-sm-10">-->
+                                            <select class="form-control select2" style="width: 100%;">
+                                                <option selected="selected">实测报警</option>
+                                                <option>预测报警</option>
+                                            </select>
+                                            <!--</div>-->
+                                        </div>
+                                    </div>
+                                    <!-- /.form-group -->
+                                </div>
+                                <!--row-->
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -195,9 +219,9 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="col-sm-4 control-label">监测项目名称:</label>
-                                            <!--<label >监测项目名称:</label>-->
-                                            <div class="col-sm-8">
+                                            <!--<label class="col-sm-2 control-label">监测项目名称:</label>-->
+                                            <label >监测项目名称:</label>
+                                            <!--<div class="col-sm-10">-->
                                                 <select class="form-control select2" style="width: 100%;">
                                                     <option selected="selected">桩深层水平位移</option>
                                                     <option>桩顶水平位移</option>
@@ -207,15 +231,14 @@
                                                     <option>周边建筑物沉降</option>
                                                     <option>地下管线变形</option>
                                                 </select>
-                                            </div>
+                                            <!--</div>-->
 
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <!-- /.form-group -->
                                         <div class="form-group">
-                                            <label class="col-sm-4" >监测点位编号</label>
-                                            <div class="col-sm-8">
+                                            <label>监测点位编号</label>
                                             <select class="form-control select2" style="width: 100%;">
                                                 <option selected="selected">CX1</option>
                                                 <option>CX2</option>
@@ -225,7 +248,6 @@
                                                 <option>CX6</option>
                                                 <option>CX7</option>
                                             </select>
-                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.form-group -->
@@ -273,53 +295,43 @@
                                 <table class="table table-hover">
                                     <tr>
                                         <th>ID</th>
-                                        <th>Initial Date</th>
-                                        <th>Initial Value</th>
-                                        <th>Last Date</th>
-                                        <th>Last Value</th>
-                                        <th>Current Date</th>
-                                        <th>Current Value</th>
-                                        <th>Status</th>
+                                        <th>监测项目</th>
+                                        <th>监测值</th>
+                                        <th>报警级别</th>
+                                        <th>报警原因</th>
+                                        <th>处理状态</th>
                                     </tr>
                                     <tr>
                                         <td>183</td>
                                         <td>11-7-2014</td>
                                         <td>3.11</td>
-                                        <td>11-7-2014</td>
-                                        <td>3.11</td>
-                                        <td>11-7-2014</td>
-                                        <td>3.11</td>
-                                        <td><span class="label label-success">安全</span></td>
+                                        <td><span class="label label-warning">预警</span></td>
+                                        <td>预测累积量超出报警值</td>
+                                        <td><span class="label label-info">未处理</span></td>
                                     </tr>
                                     <tr>
-                                        <td>219</td>
-                                        <td>11-7-2014</td>
-                                        <td>3.11</td>
-                                        <td>11-7-2014</td>
-                                        <td>3.11</td>
+                                        <td>183</td>
                                         <td>11-7-2014</td>
                                         <td>3.11</td>
                                         <td><span class="label label-warning">预警</span></td>
+                                        <td>预测累积量超出报警值</td>
+                                        <td><span class="label label-info">未处理</span></td>
                                     </tr>
                                     <tr>
-                                        <td>657</td>
-                                        <td>11-7-2014</td>
-                                        <td>3.11</td>
-                                        <td>11-7-2014</td>
-                                        <td>3.11</td>
+                                        <td>183</td>
                                         <td>11-7-2014</td>
                                         <td>3.11</td>
                                         <td><span class="label label-warning">预警</span></td>
+                                        <td>预测累积量超出报警值</td>
+                                        <td><span class="label label-info">未处理</span></td>
                                     </tr>
                                     <tr>
-                                        <td>175</td>
+                                        <td>183</td>
                                         <td>11-7-2014</td>
                                         <td>3.11</td>
-                                        <td>11-7-2014</td>
-                                        <td>3.11</td>
-                                        <td>11-7-2014</td>
-                                        <td>3.11</td>
-                                        <td><span class="label label-danger">报警</span></td>
+                                        <td><span class="label label-warning">预警</span></td>
+                                        <td>预测累积量超出报警值</td>
+                                        <td><span class="label label-info">未处理</span></td>
                                     </tr>
                                 </table>
                             </div>
@@ -330,15 +342,6 @@
                     <!-- /.box -->
                 </div>
                 <!-- /.col -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
-                    <div class="form-group col-lg-offset-10">
-                        <button type="submit" class="btn btn-info">导出Excel</button>
-                    </div>
-                </div>
             </div>
             <!-- /.row -->
         </section>
